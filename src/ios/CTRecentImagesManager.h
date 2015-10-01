@@ -19,7 +19,6 @@
 #import <Foundation/Foundation.h>
 
 #import <Cordova/CDVPlugin.h>
-#import "CTRecentImages.h"
 
 @interface CTRecentImagesManager : NSObject
 

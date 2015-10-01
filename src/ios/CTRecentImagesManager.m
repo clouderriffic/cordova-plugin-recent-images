@@ -18,6 +18,7 @@
  */
 
 #import "CTRecentImagesManager.h"
+#import "CTRecentImages.h"
 
 @implementation CTRecentImagesManager
 
