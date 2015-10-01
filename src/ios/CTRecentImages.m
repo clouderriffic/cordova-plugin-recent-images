@@ -16,8 +16,8 @@
  specific language governing permissions and limitations
  under the License.
  */
+#import <Photos/Photos.h>
 #import "CTRecentImages.h"
-@import Photos;
 
 @implementation CTRecentImages
 

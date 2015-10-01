@@ -24,14 +24,14 @@
     <name>Whitelist</name>
     <description>Cordova Recent Images Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,whitelist,policy</keywords>
+    <keywords>cordova, Images, Recent Images</keywords>
 
     <engines>
       <engine name="cordova" version=">=3.0.0" />
     </engines>
     <platform name="ios">
       <config-file target="config.xml" parent="/*">
-      	<feature name="ImagePicker">
+      	<feature name="RecentImages">
       		<param name="ios-package" value="CTRecentImagesManager"/>
       	</feature>
       </config-file>
@@ -42,18 +42,5 @@
       <source-file src="src/ios/CTRecentImages.m" />
       
     </platform>
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Whitelist" >
-                <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-
-        <source-file src="src/android/WhitelistPlugin.java" target-dir="src/org/apache/cordova/whitelist" />
-
-        <js-module src="recentImages.js" name="RecentImages">
-            
-        </js-module>
-    </platform>
+    <js-module src="recentImages.js" name="RecentImages"></js-module>
 </plugin>
