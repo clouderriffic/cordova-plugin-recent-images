@@ -42,5 +42,7 @@
       <source-file src="src/ios/CTRecentImages.m" />
       
     </platform>
-    <js-module src="recentImages.js" name="RecentImages"></js-module>
+    <js-module src="recentImages.js" name="RecentImages">
+      <clobbers target="plugins.recentImages" />
+    </js-module>
 </plugin>

@@ -20,7 +20,7 @@
 
 #import <Cordova/CDVPlugin.h>
 
-@interface CTRecentImagesManager : NSObject
+@interface CTRecentImagesManager : CDVPlugin
 
 @property (copy)   NSString* callbackId;
 
