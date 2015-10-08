@@ -20,9 +20,9 @@
 
 /*global cordova,window,console*/
 /**
- * An Image Picker plugin for Cordova
+ * An Recent Images plugin for Cordova
  * 
- * Developed by Wymsee for Sync OnSet
+ * Developed by Clouderriffic
  */
 
 var RecentImages = function() {
@@ -48,12 +48,12 @@ RecentImages.prototype.getRecentImages = function(success, fail, options) {
 	
 	var params = {
 		maximumImagesCount: options.maximumImagesCount ? options.maximumImagesCount : 10,
-		width: options.width ? options.width : 0,
-		height: options.height ? options.height : 0,
+		width: options.width ? options.width : 800,
+		height: options.height ? options.height : 800,
 		quality: options.quality ? options.quality : 1.0
 	};
 
-	return cordova.exec(success, fail, "CTRecentImagesManager", "getRecentImages", [params]);
+	return cordova.exec(success, fail, "RecentImages", "getRecentImages", [params]);
 };
 
 window.recentImages = new RecentImages();

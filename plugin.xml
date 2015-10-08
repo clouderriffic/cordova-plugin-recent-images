@@ -40,7 +40,7 @@
       
       <header-file src="src/ios/CTRecentImages.h" />
       <source-file src="src/ios/CTRecentImages.m" />
-      
+      <framework src="Photos.framework" />
     </platform>
     <js-module src="recentImages.js" name="RecentImages">
       <clobbers target="plugins.recentImages" />

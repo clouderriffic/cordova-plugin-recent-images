@@ -28,10 +28,12 @@
     self.callbackId = command.callbackId;
 	NSDictionary *options = [command.arguments objectAtIndex: 0];
     CTRecentImages *recentImage = [[CTRecentImages alloc] init];
-    
-    [recentImage fetchRecentPhotosWithImageOptions:options completion:^(NSArray *images) {
-        CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:images];
-        [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
+    // Run on a background thread
+    [self.commandDelegate runInBackground:^{
+        [recentImage fetchRecentPhotosWithImageOptions:options completion:^(NSArray *images) {
+            CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:images];
+            [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
+        }];
     }];
 }
 @end
