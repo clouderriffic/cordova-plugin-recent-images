@@ -45,6 +45,9 @@
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
     options.networkAccessAllowed = YES;
+    options.deliveryMode = PHImageRequestOptionsDeliveryModeOpportunistic;
+    options.resizeMode = PHImageRequestOptionsResizeModeFast;
+    
     PHFetchOptions *fetchOptions = [[PHFetchOptions alloc]init];
     fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     fetchOptions.fetchLimit = self.maximumImagesCount;
