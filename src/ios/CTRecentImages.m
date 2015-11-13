@@ -49,7 +49,7 @@
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
     
     PHFetchOptions *fetchOptions = [[PHFetchOptions alloc]init];
-    fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     fetchOptions.fetchLimit = self.maximumImagesCount;
     
     PHFetchResult *photos = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:fetchOptions];
